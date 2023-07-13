@@ -14,7 +14,7 @@ import QtQuick.Studio.Effects
 Item {
     id: delegate
     width: ListView.view.width
-    height: 140
+    height: 256
 
     Rectangle {
         id: rectangle
@@ -34,8 +34,8 @@ Item {
                 id: pictureFrame
                 color: "#002244"
                 radius: 100
-                Layout.preferredHeight: 64
-                Layout.preferredWidth: 64
+                Layout.preferredHeight: 128
+                Layout.preferredWidth: 128
                 clip: true
 
                 layer {
@@ -69,7 +69,7 @@ Item {
                     text: name
                     Layout.fillWidth: true
                     font {
-                        pixelSize: 16
+                        pixelSize: 32
                         bold: true
                     }
                 }
@@ -79,7 +79,7 @@ Item {
                     wrapMode: Text.WordWrap
                     Layout.fillWidth: true
                     font {
-                        pixelSize: 16
+                        pixelSize: 32
                     }
                 }
             }
