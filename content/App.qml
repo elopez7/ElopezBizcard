@@ -8,8 +8,8 @@ import ElopezBizCard
 
 ApplicationWindow {
     id: window
-    width: Constants.width
-    height: Constants.height
+    width: 480
+    height: 640
 
     visible: true
     title: "ElopezBizCard"
@@ -17,7 +17,6 @@ ApplicationWindow {
 
     Screen01 {
         id: mainScreen
-        anchors.right: parent.right
         anchors.fill: parent
         anchors{
             topMargin: 24

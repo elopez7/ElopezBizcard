@@ -25,17 +25,21 @@ Item {
         radius: 16
         border.width: 2
 
-        RowLayout {
+        GridLayout {
             id: cardLayout
             anchors.fill: parent
+            rows: 2
+            columns: 2
             anchors.rightMargin: 24
             anchors.leftMargin: 24
             Rectangle {
                 id: pictureFrame
                 color: "#002244"
-                radius: 100
-                Layout.preferredHeight: 128
-                Layout.preferredWidth: 128
+                radius: pictureFrame.width
+                Layout.preferredWidth: 1
+                Layout.rowSpan: 2
+                Layout.fillHeight: true
+                Layout.fillWidth: true
                 clip: true
 
                 layer {
@@ -62,25 +66,29 @@ Item {
                     fillMode: Image.PreserveAspectFit
                 }
             }
-
-            ColumnLayout {
-                Label {
-                    id: projectTitle
-                    text: name
-                    Layout.fillWidth: true
-                    font {
-                        pixelSize: 32
-                        bold: true
-                    }
+            Label {
+                id: projectTitle
+                text: name
+                verticalAlignment: Text.AlignBottom
+                Layout.preferredWidth: 2
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                fontSizeMode: Text.Fit
+                font {
+                    pixelSize: 32
+                    bold: true
                 }
-                Label {
-                    id: projectDescription
-                    text: description
-                    wrapMode: Text.WordWrap
-                    Layout.fillWidth: true
-                    font {
-                        pixelSize: 32
-                    }
+            }
+            Label {
+                id: projectDescription
+                text: description
+                wrapMode: Text.WordWrap
+                Layout.preferredWidth: 2
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                fontSizeMode: Text.Fit
+                font {
+                    pixelSize: 32
                 }
             }
         }

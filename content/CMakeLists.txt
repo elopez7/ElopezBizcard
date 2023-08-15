@@ -10,7 +10,9 @@ qt6_add_qml_module(content
     QML_FILES
         PortfolioViewModel.qml
         Screen01.ui.qml
+        InformationCard.qml
         PortfolioView.ui.qml
+        InformationCardForm.ui.qml
         App.qml
         PortfolioViewDelegate.ui.qml
     RESOURCES
